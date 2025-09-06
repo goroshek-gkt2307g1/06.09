@@ -6,8 +6,11 @@
         xmlns:local="clr-namespace:_06._09"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Slider Minimum="8" Maximum="30" ValueChanged="Slider_ValueChanged"></Slider>
+    <StackPanel>
+        <Slider Minimum="8" Maximum="30" ValueChanged="SliderFontSize"></Slider>
+        <TextBlock x:Name="Message" FontSize="{Binding ElementName=SliderFontSize, Path=Value}">
+            Пример WPF-приложения для демонтрации привязки данных
+        </TextBlock>
         
-    </Grid>
+    </StackPanel>
 </Window>

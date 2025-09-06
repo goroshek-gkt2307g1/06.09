@@ -20,5 +20,13 @@ namespace _06._09
         {
             InitializeComponent();
         }
+
+        private void SliderFontSize(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (Message != null)
+            {
+                Message.FontSize = ((Slider)sender).Value;
+            }
+        }
     }
 }
